@@ -11,6 +11,7 @@
 Laravel 8.83.8
 
 ## テーブル設計
-<img width="742" alt="スクリーンショット 2023-10-28 15 03 47" src="https://github.com/imaitomoko/contact-test/assets/138956469/d5374933-ccd8-4a01-a847-bbed2cc77a7e">
+<img width="774" alt="スクリーンショット 2023-10-28 16 46 39" src="https://github.com/imaitomoko/contact-test/assets/138956469/bf3a0083-6f0d-488e-a70e-6e83bec29edf">
+
 
 ## ER図
