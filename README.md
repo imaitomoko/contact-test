@@ -15,3 +15,4 @@ Laravel 8.83.8
 
 
 ## ER図
+<img width="426" alt="スクリーンショット 2023-10-28 15 26 46" src="https://github.com/imaitomoko/contact-test/assets/138956469/0d331be7-db12-4c7a-a68e-63c78ec949a9">
