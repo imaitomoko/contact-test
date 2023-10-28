@@ -1,0 +1,139 @@
+.form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.content__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+input[type="text"], input[type="email"], textarea {
+    border:none;
+    resize: none;
+    outline: none;
+    width: 100%;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form__group--title {
+    width: 20%;
+    padding-top: 10px;
+}
+
+.form__label--item  {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form__label--required {
+    color: darkgrey;
+}
+
+.form__group--name {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.form__last-name, .form__first-name {
+    width: 48%;
+}
+
+.form__input--text_name {
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    padding: 10px;
+    height: 30px;
+}
+
+.form__error {
+    height: 15px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__group--sample {
+    color: #a9a9a9;
+    padding-left: 15px;
+}
+
+.form__group--content {
+    width: 80%;
+}
+
+.form__gender {
+    display: flex;
+    padding-top: 10px;
+}
+
+.form__gender-label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form__gender--radio {
+    padding-right: 30px;
+}
+
+.form__zip {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__zip--sign {
+    font-weight: bolder;
+}
+
+.form__input--text-zip {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.form__input--text {
+    padding: 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.form__input--textarea {
+    padding: 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    height: 180px;
+}
+
+.form__button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form__button--submit {
+    padding: 10px;
+    width: 20%;
+    height: 50px;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+

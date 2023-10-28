@@ -1,0 +1,96 @@
+.admin__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.section__title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.search-form {
+    border: 2px solid #000;
+    width: 90%;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.search-form__group {
+    margin: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.search-form__heading {
+    font-weight: bold;
+}
+
+.search-form__inputs {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+}
+
+.search-form__button {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.search-form__button-submit {
+    width: 30%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-form__reset-submit {
+    padding-top: 10px;
+    border-bottom: #000;
+}
+
+.pagination {
+    text-align: left;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.search-table {
+    margin: 50px auto;
+    width: 90%;
+    text-align: center;
+}
+
+.search-table__inner {
+    width: 100%;
+}
+
+.search-table__header {
+    border-bottom: 2px solid #000;
+    padding: 15px 40px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.search-table__header-id, .search-table__header-name, .search-table__header-sex {
+    width: 10%;
+}
+
+.search-table__header-email {
+    width: 20%;
+}
+
+.search-table__header-opinion {
+    width: 50%;
+}
+
+
+
+
