@@ -17,34 +17,36 @@
         </div>
         <form class="search-form" action="/search" method="get">
             @csrf
-            <div class="search-form__group">
-                <label class="search-form__heading" for="name">お名前</label>
-                <input class="search-form__text" type="text" name="last_name" value="{{ old('last_name') }}">
-            </div>
-            <div class="search-form__group-gender">
-                <label class="search-form__heading" for="gender">性別</label>
-                <div class="form-check">
-                    <input class="form-check_input" type="radio" name="gender" id="all" value="all" checked>
-                    <label class="form-check_label" for="all">全て</label>
+            <div class="search-form__group-first">
+                <div class="search-form__group">
+                    <label class="search-form__heading" for="name">お名前</label>
+                    <input class="search-form__text" type="text" name="last_name" value="{{ old('last_name') }}">
                 </div>
-                <div class="form-check">
-                    <input class="form-check_input" type="radio" name="gender" id="male" value="male">
-                    <label class="form-check_label" for="male">男性</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check_input" type="radio" name="gender" id="female" value="female">
-                    <label class="form-check_label" for="female">女性</label>
+                <div class="search-form__group">
+                    <label class="search-form__heading" for="gender">性別</label>
+                    <div class="form-check">
+                        <input class="form-check_input" type="radio" name="gender" id="all" value="all" checked/>
+                        <label class="form-check_label" for="all">全て</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check_input" type="radio" name="gender" id="male" value="male">
+                        <label class="form-check_label" for="male">男性</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check_input" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check_label" for="female">女性</label>
+                    </div>
                 </div>
             </div>
             <div class="search-form__group-date">
                 <label class="search-form__heading" for="created_at">登録日</label>
-                    <input class="form-control" type="date" name="start_date" id="start_date">
+                    <input class="form-control" type="date" name="start_date" id="start_date" value="{{ old('start_date') }}">
                     <p class="between">〜</p>
-                    <input class="form-control"  type="date" name="end_date" id="end_date">
+                    <input class="form-control" type="date" name="end_date" id="end_date" value="{{ old('end_date') }}">
             </div>
             <div class="search-form__group">
                 <label class="search-form__heading">メールアドレス</label>
-                <input class="search-form__text" type="email" name="email" id="email">
+                <input class="search-form__text" type="email" name="email" id="email" value="{{ old('email') }}">>
             </div>
             <div class="search-form__button">
                 <button class="search-form__button-submit" type="submit">検索</button>
@@ -54,41 +56,30 @@
 
         <div class="search-table">
             <table class="search-table__inner">
-                @foreach ($contacts as $contact)
-                <tr class="search-table__row">
-                    <th class="search-table__header">
-                        <span class="search-table__header-id">ID</span>
-                        <span class="search-table__header-name">お名前</span>
-                        <span class="search-table__header-sex">性別</span>
-                        <span class="search-table__header-email">メールアドレス</span>
-                        <span class="search-table__header-opinion">ご意見</span>
-                    </th>
+                <tr class="search-table__header>
+                    <th class="search-table__header-id">ID</th>
+                    <th class="search-table__header-name">お名前</th>
+                    <th class="search-table__header-gender">性別</th>
+                    <th class="search-table__header-email">メールアドレス</th>
+                    <th class="search-table__header-opinion">ご意見</th>
                 </tr>
-                @endforeach
-                @foreach ($contacts ad $contact)
-                <tr class="search-table__row">
-                    <td class="search-table__item">
-                        {{$contact->getDetail()}}
-                        @if(strlen($contact) > 25)
-                            <span class="abbreviate">{{ substr($contact, 0, 25) }}...</span>
-                            <span class="full-text" style="display: none;">{{ $data }}</span>
-                        @else
-                            {{ $contact }}
-                        @endif
-
-                        <form class="delete-form" action="/delete" method="post">
-                            @method('delete') @csrf
-                            <div class="delete-form__button">
-                                <input type="hidden" name="id" value="{{ $contact['id'] }}">
-                                <button class="delete-form_button-submit" type="submit">削除</button>
-                            </div>
-                        </form>
+                @foreach($contacts as $contact)
+                <tr>
+                    <td>{{$contact->id}}</td>
+                    <td>{{$contact->last_name}}</td>
+                    <td>{{$contact->gender}}</td>
+                    <td>{{$contact->email}}</td>
+                    <td>{{$contact->opinion}}</td>
+                    <td>
+                    <form class="id" action="">
+                        <input data-user_id="{{$contact->id}}" type="submit" class="btn btn-danger btn-dell" value="削除">
+                    </form>
                     </td>
                 </tr>
                 @endforeach
+
             </table>
-            {{ $contacts ->links() } }
-        </div>
+        </div>  
     </div>
 </body>
 </html>

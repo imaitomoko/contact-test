@@ -122,6 +122,11 @@
                     <div class="form__input--text">
                         <input type="text" name="addr11" value="{{ old('addr11') }}"/>
                     </div>
+                    <div class="form__error">
+                            @error('addr11')
+                            {{ $message }}
+                            @enderror
+                    </div>
                     <div class="form__group--sample">
                         <p>例）東京都渋谷区千駄ヶ谷1-2-3</p>
                     </div>

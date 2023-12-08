@@ -28,6 +28,7 @@ class ContactRequest extends FormRequest
             'first_name' => 'required',
             'email' => ['required', 'email'],
             'zip11' => ['required', 'regex:/^[0-9]{3}-[0-9]{4}$/'],
+            'addr11' => 'required',
             'building' => 'nullable',
             'opinion' => ['required', 'max:120'],
         ];
@@ -42,6 +43,7 @@ class ContactRequest extends FormRequest
             'email.email' => 'メールアドレス形式で入力してください',
             'zip11.required' => '郵便番号を入力してください',
             'zip11.regex:/^[0-9]{3}-[0-9]{4}$/' => 'ハイフンありの８桁の数値で入力してください',
+            'addr11.required' => '住所を入力してください',
             'opinion.required' => 'ご意見を入力してください',
             'opinion.max'=> 'ご意見を120文字以内で入力してください',
         ];
