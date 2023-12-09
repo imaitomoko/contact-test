@@ -55,6 +55,7 @@
         </form>
 
         <div class="search-table">
+            {{ $contacts->links()}}
             <table class="search-table__inner">
                 <tr class="search-table__header">
                     <th class="search-table__header-id">ID</th>
@@ -85,6 +86,7 @@
                 @endforeach
 
             </table>
+            
         </div>  
     </div>
 </body>

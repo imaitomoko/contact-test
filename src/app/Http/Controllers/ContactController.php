@@ -39,7 +39,7 @@ class ContactController extends Controller
         else {
             $contacts = Contact::get();
         }
-        
+        $contacts = Contact::simplePaginate(10);
         return view('admin', ['contacts' => $contacts, 'last_name' => $request->last_names]);
     }
 
