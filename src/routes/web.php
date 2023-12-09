@@ -22,4 +22,4 @@ Route::get('/', [ContactController::class, 'index']);
 Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/search', [ContactController::class, 'search']);
-Route::delete('/delete',[ContactController::class, 'destroy']);
+Route::delete('/search/delete', [ContactController::class, 'destroy']);

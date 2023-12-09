@@ -43,10 +43,10 @@ class ContactController extends Controller
         return view('admin', ['contacts' => $contacts, 'last_name' => $request->last_names]);
     }
 
-    public function destroy(request $request)
+    public function destroy(Request $request)
     {
         Contact::find($request->id)->delete();
-        return redirect('/delete');
+        return redirect('/search');
     }
 }
 

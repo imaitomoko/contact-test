@@ -20,7 +20,7 @@
             <div class="search-form__group-first">
                 <div class="search-form__group">
                     <label class="search-form__heading" for="name">お名前</label>
-                    <input class="search-form__text" type="text" name="last_name" value="{{$last_name}}">
+                    <input class="search-form__text" type="search" name="last_name" value="{{$last_name}}">
                 </div>
                 <div class="search-form__group">
                     <label class="search-form__heading" for="gender">性別</label>
@@ -46,22 +46,23 @@
             </div>
             <div class="search-form__group">
                 <label class="search-form__heading">メールアドレス</label>
-                <input class="search-form__text" type="email" name="email" id="email" value="{{ old('email') }}">>
+                <input class="search-form__text" type="email" name="email" id="email" value="{{ old('email') }}">
             </div>
             <div class="search-form__button">
                 <button class="search-form__button-submit" type="submit">検索</button>
-                <button class="search-form__reset-submit" type="submit">リセット</button>
+                <button class="search-form__reset-submit" type="reset">リセット</button>
             </div>
         </form>
 
         <div class="search-table">
             <table class="search-table__inner">
-                <tr class="search-table__header>
+                <tr class="search-table__header">
                     <th class="search-table__header-id">ID</th>
                     <th class="search-table__header-name">お名前</th>
                     <th class="search-table__header-gender">性別</th>
                     <th class="search-table__header-email">メールアドレス</th>
                     <th class="search-table__header-opinion">ご意見</th>
+                    <th class="search-table__header-delete"></th>
                 </tr>
                 @foreach($contacts as $contact)
                 <tr>
@@ -71,8 +72,13 @@
                     <td>{{$contact->email}}</td>
                     <td>{{$contact->opinion}}</td>
                     <td>
-                    <form class="id" action="">
-                        <input data-user_id="{{$contact->id}}" type="submit" class="btn btn-danger btn-dell" value="削除">
+                    <form class="delete-form" action="/search/delete" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <div class="delete-form__button">
+                            <input type="hidden" name="id" value="{{ $contact['id'] }}">
+                            <button class="delete-form__button-submit" type="submit">削除</button>
+                        </div>
                     </form>
                     </td>
                 </tr>

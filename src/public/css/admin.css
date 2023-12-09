@@ -99,7 +99,7 @@ input {
 .search-form__reset-submit {
     padding: 15px;
     background: none;
-    font-size: 18px;
+    font-size: 16px;
     border: none;
     outline: none;
     text-decoration: underline;
@@ -130,18 +130,30 @@ input {
     padding: 15px 40px;
     text-align: left;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-.search-table__header-id, .search-table__header-name, .search-table__header-gender, .search-table__header-email {
-    padding-right: 100px;
+.search-table__header-id, .search-table__header-name, .search-table__header-gender, .search-table__header-delete {
+    width: 10%;
 }
 .search-table__header-email {
     width: 20%;
 }
 
 .search-table__header-opinion {
-    width: 50%;
+    width: 40%;
+}
+
+.delete-form__button {
+    width: 50px;
+    height: 20px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 
