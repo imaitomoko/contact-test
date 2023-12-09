@@ -20,7 +20,7 @@
             <div class="search-form__group-first">
                 <div class="search-form__group">
                     <label class="search-form__heading" for="name">お名前</label>
-                    <input class="search-form__text" type="text" name="last_name" value="{{ old('last_name') }}">
+                    <input class="search-form__text" type="text" name="last_name" value="{{$last_name}}">
                 </div>
                 <div class="search-form__group">
                     <label class="search-form__heading" for="gender">性別</label>

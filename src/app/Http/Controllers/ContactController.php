@@ -33,12 +33,14 @@ class ContactController extends Controller
 
      public function search(Request $request)
     {
+        if(isset($request->last_name)){
+            $contacts = Contact::where('last_name', $request->last_name)->get();
+        }
+        else {
+            $contacts = Contact::get();
+        }
         
-        $contacts = Contact::all();
-
-       
-        
-        return view('admin', compact('contacts'));
+        return view('admin', ['contacts' => $contacts, 'last_name' => $request->last_names]);
     }
 
     public function destroy(request $request)
